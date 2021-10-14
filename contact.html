@@ -2,375 +2,317 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio | Azabenathi</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
-    <link rel="stylesheet" href="style.css" />
-    <style>
-        /* mobile friendly alternative to using background-attachment: fixed */
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Azabenathi</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* mobile friendly alternative to using background-attachment: fixed */
+    #contact {
+      padding: 250px;
+    }
+    .contact-box {
+      background: url(./asserts/background/background2.jpg);
+    }
 
-.contact_form .container {
-  border: 1px solid black;
-  height: 90vh;
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-sizing: border-box;
-}
+    .contact-box .container {
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      width: 100%;
+      margin: 10% auto 0 auto;
+      padding: 0.1px;
+    }
 
-h1 {
-  font-weight: 400;
-  line-height: 1.2;
-}
+    .contact-box h1 {
+      font-weight: 400;
+      line-height: 1.2;
+    }
 
-p {
-  font-size: 1.125rem;
-}
+    .contact-box p {
+      font-size: 1.125rem;
+    }
 
-h1,
-p {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
+    input,
+    select,
+    textarea {
+      margin: 0;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
 
-label {
-  display: flex;
-  align-items: center;
-  font-size: 1.125rem;
-  margin-bottom: 0.5rem;
-}
+    .form-group {
+      float: left;
+      width: 50%;
+      padding: 10px;
+      /* Should be removed. Only for demonstration */
+    }
 
-input,
-button,
-select,
-textarea {
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
 
-button {
-  border: none;
-}
+    .header {
+      padding: 0 0.625rem;
+      margin-bottom: 1.875rem;
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      /* background-color: #a493c0; */
+      padding: 10px;
+    }
 
-.container {
-  width: 100%;
-  margin: 10% auto 0 auto;
-}
-@media (min-width: 425){
-  .container {
-    max-width: 400;
-    height: 100vh;
-  }
-}
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
+    .text-center {
+      text-align: center;
+    }
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-    height: 90vh;
-  }
-}
-@media (min-width: 1024px) {
-  .container {
-    max-width: 720px;
-    height: 80vh;
-  }
-}
-.header {
-  padding: 0 0.625rem;
-  margin-bottom: 1.875rem;
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  /* background-color: #a493c0; */
-  padding: 10px;
-}
-.container {
-    padding-bottom: 50px;
-}
-.contact-box{
-    margin: 50px
-}
+    /* form */
 
-.description {
-  font-style: italic;
-  font-weight: 200;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
+    form {
+      padding: 0.5rem 0.625rem;
+      border-radius: 0.25rem;
+      margin: 5%;
+    }
 
-.clue {
-  margin-left: 0.25rem;
-  font-size: 0.9rem;
-  color: #e4e4e4;
-}
+    .form-group {
+      margin: 0 auto 1.25rem auto;
+      padding: 0.25rem;
+    }
 
-.text-center {
-  text-align: center;
-}
+    .form-control {
+      display: block;
+      width: 100%;
+      height: 2.375rem;
+      padding: 0.375rem 0.75rem;
+      color: #495057;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: 0.25rem;
 
-/* form */
+    }
 
-form {
-  padding: 0.5rem 0.625rem;
-  border-radius: 0.25rem;
-  margin: 5%;
-}
+    .form-control:focus {
+      border-color: #80bdff;
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+
+    .input-textarea {
+      min-height: 120px;
+      width: 100%;
+      padding: 0.625rem;
+      resize: vertical;
+      border: 1px solid #ced4da;
+    }
 
 
-@media (min-width: 480px) {
-  form {
-    /* padding: 2.5rem; */
-    margin-top: 10%;
-  }
-  #description {
-    display: none;
-  }
-}
-@media (max-width: 480px) {
-  form {
-    /* padding: 2.5rem; */
-    margin-top: 10%;
-  }
-}
-
-.form-group {
-  margin: 0 auto 1.25rem auto;
-  padding: 0.25rem;
-}
-
-.form-control {
-  display: block;
-  width: 100%;
-  height: 2.375rem;
-  padding: 0.375rem 0.75rem;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
-.form-control:focus {
-  border-color: #80bdff;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
-.input-textarea {
-  min-height: 120px;
-  width: 100%;
-  padding: 0.625rem;
-  resize: vertical;
-}
-
-.submit-button {
-  display: block;
-  width: 75%;
-  padding: 0.75rem;
-  background-color: #18181a;
-  color: #fff;
-  font-weight: bolder;
-  font-size: 25px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 12.5%;
-  margin-bottom: 10%;
-  border-radius: 10px;
-}
-.submit-button:hover {
-  background: rgb(32, 48, 45);
-}
-
-.contact-box form a {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  color: #03e9f4;
-  font-size: 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: .5s;
-  /* margin-top: 40px; */
-  letter-spacing: 4px
-}
-.contact-box a:hover {
-  background: #03e9f4;
-  color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #03e9f4,
-              0 0 25px #03e9f4,
-              0 0 50px #03e9f4,
-              0 0 100px #03e9f4;
-}
-.contact-box a span {
-  position: absolute;
-  display: block;
-}
-.contact-box a span:nth-child(1) {
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, transparent, #03e9f4);
-  animation: btn-anim1 1s linear infinite;
-}
-@keyframes btn-anim1 {
-  0% {
-    left: -100%;
-  }
-  50%,100% {
-    left: 100%;
-  }
-}
-.contact-box a span:nth-child(2) {
-  top: -100%;
-  right: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, transparent, #03e9f4);
-  animation: btn-anim2 1s linear infinite;
-  animation-delay: .25s
-}
-
-@keyframes btn-anim2 {
-  0% {
-    top: -100%;
-  }
-  50%,100% {
-    top: 100%;
-  }
-}
-
-.contact-box a span:nth-child(3) {
-  bottom: 0;
-  right: -100%;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(270deg, transparent, #03e9f4);
-  animation: btn-anim3 1s linear infinite;
-  animation-delay: .5s
-}
-
-@keyframes btn-anim3 {
-  0% {
-    right: -100%;
-  }
-  50%,100% {
-    right: 100%;
-  }
-}
-
-.contact-box a span:nth-child(4) {
-  bottom: -100%;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(360deg, transparent, #03e9f4);
-  animation: btn-anim4 1s linear infinite;
-  animation-delay: .75s
-}
-
-@keyframes btn-anim4 {
-  0% {
-    bottom: -100%;
-  }
-  50%,100% {
-    bottom: 100%;
-  }
-}
 
 
-    </style>
+    /* Animation of a button */
+    .contact-box form a {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      color: #03e9f4;
+      font-size: 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: .5s;
+      /* margin-top: 40px; */
+      letter-spacing: 4px
+    }
+
+    .contact-box a:hover {
+      background: #03e9f4;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 100px #03e9f4;
+    }
+
+    .contact-box a span {
+      position: absolute;
+      display: block;
+    }
+
+    .contact-box a span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, #03e9f4);
+      animation: btn-anim1 1s linear infinite;
+    }
+
+    @keyframes btn-anim1 {
+      0% {
+        left: -100%;
+      }
+
+      50%,
+      100% {
+        left: 100%;
+      }
+    }
+
+    .contact-box a span:nth-child(2) {
+      top: -100%;
+      right: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, #03e9f4);
+      animation: btn-anim2 1s linear infinite;
+      animation-delay: .25s
+    }
+
+    @keyframes btn-anim2 {
+      0% {
+        top: -100%;
+      }
+
+      50%,
+      100% {
+        top: 100%;
+      }
+    }
+
+    .contact-box a span:nth-child(3) {
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(270deg, transparent, #03e9f4);
+      animation: btn-anim3 1s linear infinite;
+      animation-delay: .5s
+    }
+
+    @keyframes btn-anim3 {
+      0% {
+        right: -100%;
+      }
+
+      50%,
+      100% {
+        right: 100%;
+      }
+    }
+
+    .contact-box a span:nth-child(4) {
+      bottom: -100%;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, #03e9f4);
+      animation: btn-anim4 1s linear infinite;
+      animation-delay: .75s
+    }
+
+    @keyframes btn-anim4 {
+      0% {
+        bottom: -100%;
+      }
+
+      50%,
+      100% {
+        bottom: 100%;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-    <header>
-        <div class="container">
-            <a href="index.html">
-                Azabenathi | <span>Software Developer</span>
-            </a>
-            <div class="nav-bar">
-                <nav class="menu-flex">
-                    <!-- Humburger for the menu -->
+  <header>
+    <div class="container">
+      <a href="index.html">
+        Azabenathi | <span>Software Developer</span>
+      </a>
+      <div class="nav-bar">
+        <nav class="menu-flex">
+          <!-- Humburger for the menu -->
 
-                    <!-- <div class="menu-btn">
+          <!-- <div class="menu-btn">
                          <div class="menu-btn_burger"> -->
 
-                    <a class="active" href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <!-- <a href="#testimonials">Testimonials</a> -->
-                    <a href="contact.html">Contact</a>
-                    <!-- </div>
+          <a class="active" href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <!-- <a href="#testimonials">Testimonials</a> -->
+          <a href="contact.html">Contact</a>
+          <!-- </div>
                      </div> -->
-                </nav>
-            </div>
-        </div>
-    </header>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-    <!-- The Contact Form -->
-    <main>
-        <section class="contact-box">
-            <div class="container">
-                <div class="header">
-                    <h1 id="title" class="text-center">Contact Form</h1>
-                    <p id="description" class="description text-center">
-                        Thank you, looking forward for your professional input
-                    </p>
-                </div>
-                <form id="contact-form">
-                    <div class="form-group">
-                        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="surname" id="sname" class="form-control" placeholder="Enter your surname" required />
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="username" id="uname" class="form-control" placeholder="Enter your username" required />
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email"
-                            required />
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="phone-number" id="number" min="10" max="15" class="form-control" placeholder="phone-number"/>
-                    </div>
-        
-                    <div class="form-group">
-                        <textarea id="comments" class="input-textarea" name="comment"
-                            placeholder="Enter a message here..."></textarea>
-                    </div>
-        
-                    <a href="#">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        Submit
-                      </a>
-                </form>
+  <!-- The Contact Form -->
+  <main id="contact">
+    <section class="contact-box">
+      <div class="container">
+        <div class="header">
+          <h1 id="title" class="text-center">Contact Form</h1>
+          <p id="description" class="description text-center" style="">
+            <em> Thank you, looking forward for your professional input</em>
+          </p>
+        </div>
+        <form id="contact-form">
+          <!-- First Row -->
+          <div class="row">
+            <div class="form-group">
+              <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
             </div>
-        
-        </section>
-    </main>
-    <!-- The footer -->
-    <footer>
-        <p class="footer">Created By Azabenathi Pupuma &copy; 2021</p>
-    </footer>
+            <div class="form-group">
+              <input type="text" name="surname" id="sname" class="form-control" placeholder="Enter your surname"
+                required />
+            </div>
+          </div>
+          <!-- Second Row -->
+          <div class="row">
+            <div class="form-group">
+              <input type="text" name="phone-number" id="number" min=10 max=15 class="form-control"
+                placeholder="Enter your phone-number" />
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email"
+                required />
+            </div>
+          </div>
+
+          <div class="message">
+            <textarea id="comments" class="input-textarea" name="comment"
+              placeholder="Enter a message here..."></textarea>
+          </div>
+
+          <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </a>
+        </form>
+      </div>
+
+    </section>
+  </main>
+  <!-- The footer -->
+  <footer>
+    <p class="footer">Created By Azabenathi Pupuma &copy; 2021</p>
+  </footer>
 </body>
 
 </html>

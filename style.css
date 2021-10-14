@@ -20,7 +20,7 @@ body {
   margin: 0 auto;
   padding:0 128px;
 }
-/* Landing Page */
+
 header {
   position: fixed;
   top: 0;
@@ -44,7 +44,7 @@ header .container h2 {
 }
 header a span {
   font-weight: 20px;
-  color: black;
+  color: orange;
 }
 header a {
   text-decoration: none;
@@ -123,6 +123,9 @@ nav a {
     list-style: none;
     margin: 0 5px 0 5px;
 }
+/* Landing Page */
+
+
 main .landing-page {
   color: #fff;
   position: relative;
@@ -131,52 +134,158 @@ main .landing-page {
   align-items: center;
   /* width: 100%; */
   background: rgb(175, 162, 247)  no-repeat;
-  background-image: url(./images/background4.jpeg);
+  background-image: url(./asserts/background/background.jpeg);
   background-position: center right;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -3;
 }
-main .about-page {
-  color: #fff;
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  /* width: 100%; */
-  background: rgb(175, 162, 247)  no-repeat;
-  background-image: url(./images/background2.jpg);
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -3;
+
+/* Animation of a Landing Page */
+.typing h1 {
+  border-right: .15em solid orange;
+  font-family: "Courier";
+  /* font-size: 14px; */
+  white-space: nowrap;
+  overflow: hidden;
 }
-.contact_form {
-  color: #fff;
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  /* width: 100%; */
-  background: rgb(175, 162, 247)  no-repeat;
-  background-image: url(./images/background4.jpeg);
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -3;
+
+.typing h1 {
+  width: 3.5em;
+  animation: type 0.5s steps(5, end);
+  animation-fill-mode: forwards;
 }
-main .about-page::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  right: 0%;
-  bottom: 0;
-  z-index: -1;
-  background-color: #12002f;
-  opacity: 0.8;
+
+.typing h2 {
+  border-right: .15em solid orange;
+  font-family: "Courier";
+  /* font-size: 14px; */
+  white-space: nowrap;
+  overflow: hidden;
 }
+
+.typing h2 {
+  width: 10em;
+  opacity: 0;
+  animation: type2 2.2s steps(20, end);
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.typing h3 {
+  border-right: .15em solid orange;
+  font-family: "Courier";
+  /* font-size: 14px; */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.typing h3 {
+  width: 26.8em;
+  opacity: 0;
+  animation: type3 4s steps(40, end);
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+}
+
+.typing p {
+  border-right: .15em solid orange;
+  font-family: "Courier";
+  /* font-size: 14px; */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.typing p {
+  width: 54.6em;
+  opacity: 0;
+  animation: type4 5s steps(20, end), blink 0.2s step-end infinite alternate;
+  animation-delay: 6.4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
+  0% {
+      width: 0;
+  }
+
+  99.9% {
+      border-right: .15em solid orange;
+  }
+
+  100% {
+      border: none;
+  }
+}
+
+
+@keyframes type2 {
+  0% {
+      width: 0;
+  }
+
+  1% {
+      opacity: 1;
+  }
+
+  99.9% {
+      border-right: .15em solid orange;
+  }
+
+  100% {
+      opacity: 1;
+      border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+      width: 0;
+  }
+
+  1% {
+      opacity: 1;
+  }
+
+  99.9% {
+      border-right: .15em solid orange;
+  }
+
+  100% {
+      opacity: 1;
+      border: none;
+  }
+}
+
+
+@keyframes type4 {
+  0% {
+      width: 0;
+  }
+
+  1% {
+      opacity: 1;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+
+
+@keyframes blink {
+  50% {
+      border-color: transparent;
+  }
+}
+
+@-webkit-keyframes blink {
+  50% {
+      border-color: tranparent;
+  }
+}
+
 img {
   width: 100%;
 }
@@ -243,30 +352,6 @@ main .landing-page a {
   text-transform: uppercase;
 }
 
-main .about-page .container h1 {
-  font-size: 72px;
-}
-main .about-page .container h2 {
-  font-size: 57px;
-}
-main .about-page .container h3 {
-  font-size: 42px;
-}
-main .about-page .container span {
-  color: #ff9fdb;
-}
-main .about-page .container img {
-  transition: all .5s ease-in-out;
-}
-main .about-page a {
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-p.about {
-  font-size: 20px;
-  width: 60%;
-}
 /* My projects */
 main .projects {
   background-color: #aaa;
@@ -371,32 +456,83 @@ main .testimonials .container .project-grid {
 }
 
 /* About Page */
-
-
-footer {
-  left: 0%;
-  bottom: 0%;
-  position: relative;
-  width: 100%;
-  background-color: #000;
+main .about-page {
   color: #fff;
-  text-align: center;
-  padding: 12px;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  /* width: 100%; */
+  background: rgb(175, 162, 247)  no-repeat;
+  background-image: url(./asserts/background/background2.jpg);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -3;
 }
 
-@media screen and (min-width: 900px) {
-  main .testimonials .container .project-grid {
-    grid-template-columns: repeat(3, 30%);
-  } 
+
+main .about-page::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0;
+  z-index: -1;
+  background-color: #12002f;
+  opacity: 0.8;
 }
 
-@media screen and (min-width: 1200px) {
-  main .testimonials .container .project-grid {
-    grid-template-columns: repeat(4, 1fr);
-  } 
+main .about-page .container h1 {
+  font-size: 72px;
 }
+main .about-page .container h2 {
+  font-size: 57px;
+}
+main .about-page .container h3 {
+  font-size: 42px;
+}
+main .about-page .container span {
+  color: #ff9fdb;
+}
+main .about-page .container img {
+  transition: all .5s ease-in-out;
+}
+main .about-page a {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+p.about {
+  font-size: 20px;
+  width: 60%;
+}
+
+
 
 /* Timeline */
+
+main .timeline-content .container {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.experience {
+  border: 1px solid #eee;
+  margin: 10px;
+  border-radius: 25px;
+  box-shadow: 2px 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.experience h3 {
+  text-align: center;
+  text-transform: uppercase;
+  color: indianred;
+}
+
 .timeline {
   position: relative;
   width: 660px;
@@ -671,3 +807,46 @@ footer {
 }
 
 }
+
+/* About Page */
+
+
+/* Contact Page */
+.contact_form {
+  color: #fff;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  /* width: 100%; */
+  background: rgb(175, 162, 247)  no-repeat;
+  background-image: url(./asserts/background/background3.jpg);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -3;
+}
+
+footer {
+  left: 0%;
+  bottom: 0%;
+  position: relative;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+}
+
+@media screen and (min-width: 900px) {
+  main .testimonials .container .project-grid {
+    grid-template-columns: repeat(3, 30%);
+  } 
+}
+
+@media screen and (min-width: 1200px) {
+  main .testimonials .container .project-grid {
+    grid-template-columns: repeat(4, 1fr);
+  } 
+}
+
