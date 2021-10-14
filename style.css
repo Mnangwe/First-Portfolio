@@ -165,7 +165,7 @@ main .about-page {
   background-size: cover;
   z-index: -3;
 }
-main section::after {
+main .about-page::after {
   content: '';
   display: block;
   position: absolute;
