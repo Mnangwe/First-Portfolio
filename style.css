@@ -405,7 +405,8 @@ main .testimonials .container .project-grid {
   grid-gap: 50px;
   width: 100%;
   margin-bottom: 15%;
-}
+} 
+
 .flip-card {
   background-color: transparent;
   width: 300px;
